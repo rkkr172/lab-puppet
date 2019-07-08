@@ -19,10 +19,10 @@ Configuration Management is all about bringing in consistency in the infrastruct
 
 A shell script and Configuration Management tool script, both are may adding a user to host, but while the CM tool script is ""easy to understand"" and ""write"", the shell script is hard to understand and you'll have to learn how to write Shell Scripts on you own.
 
-## [Using Shell Script ]
+[example - Using Shell Script ]
 echo "myuser:*:1010:1010:user:/home/myuser:/bin/sh" >> /etc/passwd
 
-## [CM ToolScript]
+[example- Using CM ToolScript]
 user {'myuser': ensure => present, gid => "science", home => "/home/myuser", shell => "/bin/sh"}
 
 ## [Puppet]
