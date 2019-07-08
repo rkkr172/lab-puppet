@@ -30,8 +30,8 @@ puppet is a Configuration Managemnt tool that help orchestrate, provison, deploy
 - Puppet works in the master slave architecture where one master server controls all the agents nodes.
 - After the initial setup everything can be orchestrated and managed on the nodes through puppet.
 
-## Q. Why puppet ??
-A. These are some points :
+## - Why we use puppet ??
+# A. These are some points :
 - [Provisioning]: Easy deployment of application on large number of servers. Resources & their configuration can be defined at node level.
 -[Consistent]: Maintains consistency across nodes- If a changes is done locally, it is rolled back to the original configuration
 - [Ecosystem]: Puppet provides the suitable ecosystem to support and meet the needs of any company irrespective of their size.
@@ -52,8 +52,8 @@ A. These are some points :
 Agent => Server { => (fetch Node Object) => (set Variable) => (Assess the Main Manifest) => (Load Classes from Modules) => (Assess Classes from node object) => (Server) } ==> Respond back to Agent
 
 ## [Installation]
-https://puppet.com/docs/pe/2017.3/installing_pe.html
-https://puppet.com/docs/puppet/5.4/install_pre.html
+https://puppet.com/docs/pe/2017.3/installing_pe.html <br>
+https://puppet.com/docs/puppet/5.4/install_pre.html <br>
 
-$  rpm -vhi http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+$  rpm -vhi http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm <br>
 $  yum update ; yum install puppet-server -y
