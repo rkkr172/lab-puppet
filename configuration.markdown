@@ -1,20 +1,22 @@
-## [Master]
-<br>$ yum install epel-release
+## puppetmaster
+$ yum install epel-release
 <br>$ yum install puppet-server
 $ puppet cert generate <hostname><br>
 $ cd /var/lib/puppet/ssl { "certs/" "private_keys/"}<br>
 $ vim /etc/puppet/puppet.conf<br>
+---
 [main]<br>
 	dns_alt_name = test.lab<br>
 	certname = test.lab<br>
 :wq<br>
+---
 $ puppet resource service puppetmaster ensure=running<br>
 $ systemctl status puppetmaster<br>
 $ firewall-cmd --permanent --add-port={8140/tcp,8140/udp}<br>
 $ firewall-cmd --reload<br>
 $ puppet cert list	{/var/lib/puppet/ssl/ca/requests/}<br>
 $ puppet cert sign "test2.lab"<br>
-## [Agent] 
+## puppet (Agent)
 '/var/lib/puppet/ssl/ca/requests/pagent.pem'<br>
 '/var/lib/puppet/ssl/certificate_requests/pagent.pem'<br>
 
@@ -37,5 +39,7 @@ $ puppet agent --test<br>
  https://puppet.com/docs/puppet/5.3/environments_creating.html<br>
  https://github.com/puppetlabs/docs-archive<br>
  https://github.com/puppetlabs/docs-archive/blob/master/puppet/3.6/ <br>
-
+<br>
+https://yum.puppetlabs.com <br>
+https://apt.puppetlabs.com
 
