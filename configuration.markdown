@@ -1,15 +1,14 @@
 ## puppetmaster
-$ yum install epel-release
-<br>$ yum install puppet-server
+$ yum install epel-release<br>
+$ yum install puppet-server
 $ puppet cert generate <hostname><br>
 $ cd /var/lib/puppet/ssl { "certs/" "private_keys/"}<br>
-$ vim /etc/puppet/puppet.conf<br>
----
-[main]<br>
+$ vim /etc/puppet/puppet.conf <br>
+<b>[main]<br>
 	dns_alt_name = test.lab<br>
 	certname = test.lab<br>
-:wq<br>
----
+:wq</b> <br>
+
 $ puppet resource service puppetmaster ensure=running<br>
 $ systemctl status puppetmaster<br>
 $ firewall-cmd --permanent --add-port={8140/tcp,8140/udp}<br>
